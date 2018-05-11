@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'paho_mqtt/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "paho-mqtt"
+  spec.name          = "apiotics-paho-mqtt"
   spec.version       = PahoMqtt::VERSION
-  spec.authors       = ["Pierre Goudet"]
-  spec.email         = ["p-goudet@ruby-dev.jp"]
+  spec.authors       = ["Mac Dougherty", "Pierre Goudet"]
+  spec.email         = ["mac@apiotics.com"]
 
   spec.summary       = %q{A simple mqtt client gem}
   spec.description   = %q{A simple mqtt client gem}
-  spec.homepage      = "https://github.com/RubyDevInc/paho.mqtt.ruby"
+  spec.homepage      = "https://portal.apiotics.com"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
