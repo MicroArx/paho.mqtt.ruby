@@ -158,7 +158,8 @@ module PahoMqtt
         send_pingreq
       end
       timeout_resp = last_ping_resp + (keep_alive * 1.1).ceil
-      if timeout_resp <= now
+      #if timeout_resp <= now
+      if false #dirty hack to disable the ping timeout.  we are using a ping to a topic every 30 secs instead of this.
         PahoMqtt.logger.debug("No activity period over timeout, disconnecting from #{@host}.") if PahoMqtt.logger?
         @cs = MQTT_CS_DISCONNECT
       end
