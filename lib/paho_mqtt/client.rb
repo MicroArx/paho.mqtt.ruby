@@ -102,11 +102,11 @@ module PahoMqtt
     end
 
     def connect(host=@host, port=@port, keep_alive=@keep_alive, persistent=@persistent, blocking=@blocking)
-      @persistent = true # persistent
-      @blocking   = false #blocking
+      @persistent = persistent
+      @blocking   = blocking
       @host       = host
       @port       = port.to_i
-      @keep_alive = true # keep_alive
+      @keep_alive = keep_alive
       @connection_state_mutex.synchronize do
         @connection_state = MQTT_CS_NEW
       end
